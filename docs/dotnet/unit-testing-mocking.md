@@ -21,7 +21,7 @@ public void AddAndSubtract_ShouldReturnCorrectResults()
 }
 ```
 
-✅ **İdeal İstifadə:** Hər davranışı ayrı bir testdə yoxlayın.
+✅ **Düzgün İstifadə:** Hər davranışı ayrı bir testdə yoxlayın.
 
 ```csharp
 [Fact]
@@ -56,7 +56,7 @@ var result = mockCalculator.Object.Add(2, 3);
 Assert.Equal(5, result); // Mock burada gərəksizdir.
 ```
 
-✅ **İdeal İstifadə:** Mocklama, yalnız asılılıqları təcrid etmək üçün istifadə olunmalıdır.
+✅ **Düzgün İstifadə:** Mocklama, yalnız asılılıqları təcrid etmək üçün istifadə olunmalıdır.
 
 ```csharp
 var mockWeatherService = new Mock<IWeatherService>();
@@ -86,7 +86,7 @@ public void Test_AddAndSubtract()
 }
 ```
 
-✅ **İdeal İstifadə:** Testlər müstəqil olmalı və bir-birindən təsirlənməməlidir.
+✅ **Düzgün İstifadə:** Testlər müstəqil olmalı və bir-birindən təsirlənməməlidir.
 
 ```csharp
 [Fact]
@@ -122,7 +122,7 @@ public void Add_ShouldPrintResult()
 }
 ```
 
-✅ **İdeal İstifadə:** `Assert` ifadələri ilə nəticələri yoxlayın.
+✅ **Düzgün İstifadə:** `Assert` ifadələri ilə nəticələri yoxlayın.
 
 ```csharp
 [Fact]
@@ -158,7 +158,7 @@ public void Add_ShouldReturnNegative2()
 }
 ```
 
-✅ **İdeal İstifadə:** Parametrli testlərlə təkrarı azaldın.
+✅ **Düzgün İstifadə:** Parametrli testlərlə təkrarı azaldın.
 
 ```csharp
 [Theory]
@@ -193,7 +193,7 @@ public void Report_ShouldReturnWeather()
 }
 ```
 
-✅ **İdeal İstifadə:** Mock obyektlərini sinif səviyyəsində qurun.
+✅ **Düzgün İstifadə:** Mock obyektlərini sinif səviyyəsində qurun.
 
 ```csharp
 public class WeatherReporterTests

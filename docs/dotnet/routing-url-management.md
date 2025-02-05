@@ -14,7 +14,7 @@ app.MapGet("/products/{id}", (int id) => $"Məhsul ID: {id}");
 app.MapGet("/products/{category}", (string category) => $"Kateqoriya: {category}"); // Ziddiyyət
 ```
 
-✅ **İdeal İstifadə:** Routeları açıq şəkildə təyin edin və Ziddiyyətləri önləyin.
+✅ **Düzgün İstifadə:** Routeları açıq şəkildə təyin edin və Ziddiyyətləri önləyin.
 
 ```csharp
 app.MapGet("/products", () => "Bütün məhsullar");
@@ -32,7 +32,7 @@ app.MapGet("/products/category/{category}", (string category) => $"Kateqoriya: {
 app.MapGet("/user/{id}/details", (int id) => $"İstifadəçi ID: {id}");
 ```
 
-✅ **İdeal İstifadə:** Route parametrlərini mənalı və minimum səviyyədə saxlayın.
+✅ **Düzgün İstifadə:** Route parametrlərini mənalı və minimum səviyyədə saxlayın.
 
 ```csharp
 app.MapGet("/users/{id}", (int id) => $"İstifadəçi ID: {id}");
@@ -48,7 +48,7 @@ app.MapGet("/users/{id}", (int id) => $"İstifadəçi ID: {id}");
 app.MapGet("/{*path}", (string path) => $"Path: {path}"); // Digər routeları əngəlləyə bilər
 ```
 
-✅ **İdeal İstifadə:** Catch-all routeları diqqətlə və müəyyən bir məqsədə yönəlik istifadə edin.
+✅ **Düzgün İstifadə:** Catch-all routeları diqqətlə və müəyyən bir məqsədə yönəlik istifadə edin.
 
 ```csharp
 app.MapGet("/files/{*filepath}", (string filepath) => $"Fayl yolu: {filepath}");
@@ -64,7 +64,7 @@ app.MapGet("/files/{*filepath}", (string filepath) => $"Fayl yolu: {filepath}");
 app.MapGet("/home", () => "Ana Səhifə");
 ```
 
-✅ **İdeal İstifadə:** Route adlarını göstərərək yönləndirmə əməliyyatlarını daha oxunaqlı hala gətirin.
+✅ **Düzgün İstifadə:** Route adlarını göstərərək yönləndirmə əməliyyatlarını daha oxunaqlı hala gətirin.
 
 ```csharp
 app.MapGet("/home", () => "Ana Səhifə").WithName("Home");
@@ -84,7 +84,7 @@ app.MapGet("/search", (HttpContext context) =>
 });
 ```
 
-✅ **İdeal İstifadə:** Query parametrlərini birbaşa metod parametri olaraq bağlayın.
+✅ **Düzgün İstifadə:** Query parametrlərini birbaşa metod parametri olaraq bağlayın.
 
 ```csharp
 app.MapGet("/search", (string q) => $"Axtarış: {q}");
@@ -100,7 +100,7 @@ app.MapGet("/search", (string q) => $"Axtarış: {q}");
 app.MapGet("/users/{id}", (string id) => $"İstifadəçi ID: {id}");
 ```
 
-✅ **İdeal İstifadə:** Route constraintləri istifadə edərək doğru verilən tiplərini təyin edin.
+✅ **Düzgün İstifadə:** Route constraintləri istifadə edərək doğru verilən tiplərini təyin edin.
 
 ```csharp
 app.MapGet("/users/{id:int}", (int id) => $"İstifadəçi ID: {id}");
@@ -117,7 +117,7 @@ app.MapGet("/{category}", (string category) => $"Kateqoriya: {category}");
 app.MapGet("/products", () => "Məhsul siyahısı"); // İşləməz
 ```
 
-✅ **İdeal İstifadə:** Daha xüsusi routeları əvvəl təyin edin.
+✅ **Düzgün İstifadə:** Daha xüsusi routeları əvvəl təyin edin.
 
 ```csharp
 app.MapGet("/products", () => "Məhsul siyahısı");

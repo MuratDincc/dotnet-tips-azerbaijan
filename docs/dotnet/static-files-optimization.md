@@ -23,7 +23,7 @@ app.MapGet("/static/{filename}", async (HttpContext context, string filename) =>
 });
 ```
 
-✅ **İdeal İstifadə:** `UseStaticFiles` middleware-ini istifadə edərək statik faylları serve edin.
+✅ **Düzgün İstifadə:** `UseStaticFiles` middleware-ini istifadə edərək statik faylları serve edin.
 
 ```csharp
 app.UseStaticFiles();
@@ -39,7 +39,7 @@ app.UseStaticFiles();
 Bütün fayllar sıxıştırılmadan göndərilir.
 ```
 
-✅ **İdeal İstifadə:** `ResponseCompression` middleware-ini aktivləşdirin.
+✅ **Düzgün İstifadə:** `ResponseCompression` middleware-ini aktivləşdirin.
 
 ```csharp
 app.UseResponseCompression();
@@ -62,7 +62,7 @@ builder.Services.AddResponseCompression(options =>
 Cache-Control başlığı olmadan fayllar göndərilir.
 ```
 
-✅ **İdeal İstifadə:** Keşləmə başlıqlarını qurun.
+✅ **Düzgün İstifadə:** Keşləmə başlıqlarını qurun.
 
 ```csharp
 app.UseStaticFiles(new StaticFileOptions
@@ -85,7 +85,7 @@ app.UseStaticFiles(new StaticFileOptions
 images/background.png (5MB)
 ```
 
-✅ **İdeal İstifadə:** Şəkilləri sıxışdıraraq və CDN istifadə edərək optimizə edin.
+✅ **Düzgün İstifadə:** Şəkilləri sıxışdıraraq və CDN istifadə edərək optimizə edin.
 
 - **Alətlər:** ImageMagick, TinyPNG
 - **Nümunə:** Şəkilləri bir CDN üzərindən paylamaq.
@@ -104,7 +104,7 @@ https://cdn.example.com/images/background.png
 Statik fayllar X-Content-Type-Options başlığı olmadan göndərilir.
 ```
 
-✅ **İdeal İstifadə:** Təhlükəsizlik başlıqlarını qurun.
+✅ **Düzgün İstifadə:** Təhlükəsizlik başlıqlarını qurun.
 
 ```csharp
 app.UseStaticFiles(new StaticFileOptions
@@ -127,7 +127,7 @@ app.UseStaticFiles(new StaticFileOptions
 Bütün fayllar serverdən yüklənir.
 ```
 
-✅ **İdeal İstifadə:** Statik faylları bir CDN ilə paylayın.
+✅ **Düzgün İstifadə:** Statik faylları bir CDN ilə paylayın.
 
 ```plaintext
 https://cdn.example.com/styles/main.css
@@ -146,7 +146,7 @@ https://cdn.example.com/scripts/app.js
 <link rel="stylesheet" href="/css/theme.css">
 ```
 
-✅ **İdeal İstifadə:** Faylları birləşdirərək HTTP sorğularını azaldın.
+✅ **Düzgün İstifadə:** Faylları birləşdirərək HTTP sorğularını azaldın.
 
 ```html
 <link rel="stylesheet" href="/css/styles.bundle.css">
