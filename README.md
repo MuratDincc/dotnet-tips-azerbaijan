@@ -21,6 +21,9 @@ Layihəyə baxmaq üçün bura klikləyin: [Dotnet Məsləhətləri](https://mur
 
 Əgər bu layihəni bəyəndinizsə, zəhmət olmasa ⭐ ilə dəstək olmağı unutmayın!
 
+- **Murat Dinç** - [@muratdincc](https://github.com/muratdincc)
+- **Alistein** - [@alistein](https://github.com/alistein)
+
 ---
 
 ## Əlaqə
